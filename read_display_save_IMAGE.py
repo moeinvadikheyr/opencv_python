@@ -9,7 +9,7 @@ if img is None:
     sys.exit("could not read the image!")
 cv.namedWindow("image",cv.WINDOW_AUTOSIZE)
 cv.imshow("image",img)
-key = cv.waitKey(0)
+key = cv.waitKey(0) & 0xFF
 if key == 27:
     cv.destroyAllWindows()
 elif key == ord('s'):
